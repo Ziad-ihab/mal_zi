@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Her — Malak's World</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="content-manager.css?v=3">
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         BACKGROUND
+    ========================================== -->
+
+    <div class="ocean-background">
+
+        <div class="dark-overlay"></div>
+
+        <div class="blue-glow"></div>
+
+        <div class="stars"></div>
+
+        <!-- Moon -->
+        <div class="moon"></div>
+
+        <!-- Moon glow -->
+        <div class="moon-glow"></div>
+
+
+        <!-- Bubbles -->
+
+        <div class="bubble bubble-1"></div>
+        <div class="bubble bubble-2"></div>
+        <div class="bubble bubble-3"></div>
+        <div class="bubble bubble-4"></div>
+        <div class="bubble bubble-5"></div>
+        <div class="bubble bubble-6"></div>
+        <div class="bubble bubble-7"></div>
+        <div class="bubble bubble-8"></div>
+        <div class="bubble bubble-9"></div>
+        <div class="bubble bubble-10"></div>
+        <div class="bubble bubble-11"></div>
+        <div class="bubble bubble-12"></div>
+
+    </div>
+
+
+
+    <!-- =========================================
+         NAVBAR
+    ========================================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <span>☆</span>
+
+            Malak
+
+            <span class="logo-sparkle">✦</span>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="loves.html">Things She Loves</a>
+
+            <a href="memory.html">Memories</a>
+
+            <a href="music.html">Music</a>
+
+            <a href="about.html" class="active">About Her</a>
+
+            <a href="surprises.html">Surprises</a>
+
+            <a href="foryou.html">For You</a>
+
+        </nav>
+
+
+        <button class="music-button" id="musicButton">
+
+            ♫
+
+        </button>
+
+
+        <button class="menu-button" id="menuButton" aria-label="Menu">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </header>
+
+
+    <!-- =========================================
+         MOBILE NAV
+    ========================================== -->
+
+    <nav class="mobile-nav" id="mobileNav">
+
+        <a href="index.html">Home</a>
+        <a href="loves.html">Things She Loves</a>
+        <a href="memory.html">Memories</a>
+        <a href="music.html">Music</a>
+        <a href="about.html" class="active">About Her</a>
+        <a href="surprises.html">Surprises</a>
+        <a href="foryou.html">For You</a>
+
+    </nav>
+
+
+
+    <!-- =========================================
+         LEFT FLOATING MENU
+    ========================================== -->
+
+    <div class="floating-menu">
+
+        <a href="foryou.html" class="float-btn" title="For You">
+            ♡
+        </a>
+
+        <a href="loves.html" class="float-btn" title="Things She Loves">
+            ≋
+        </a>
+
+        <a href="surprises.html" class="float-btn" title="Surprises">
+            ☆
+        </a>
+
+        <a href="about.html" class="float-btn" title="About Her">
+            ♡
+        </a>
+
+    </div>
+
+
+
+    <main>
+
+        <!-- =========================================
+             ABOUT
+        ========================================== -->
+
+        <section class="about-section" id="about">
+
+            <div class="about-card reveal">
+
+                <div class="section-title reveal">
+
+                    <div class="title-line"></div>
+                    <span>✦</span>
+                    <h2>About Her</h2>
+                    <span>✦</span>
+                    <div class="title-line"></div>
+
+                </div>
+
+                <!-- استبدل النص ده بكلام حقيقي عنها -->
+
+                <p class="about-text">
+                    She carries the calm of the sea and the light of the moon —
+                    quiet strength, a soft heart, and a mind that finds beauty
+                    in the smallest things. This page is one small way of
+                    saying: the world is better with her in it.
+                </p>
+
+                <div class="about-traits">
+
+                    <div class="trait">
+                        <span>♡</span>
+                        <p>Kind Hearted</p>
+                    </div>
+
+                    <div class="trait">
+                        <span>☆</span>
+                        <p>Dreamer</p>
+                    </div>
+
+                    <div class="trait">
+                        <span>≋</span>
+                        <p>Deep Soul</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+    <!-- Firebase (Content Manager) -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script src="firebase-config.js"></script>
+    <script>window.PAGE_TYPE = "about";</script>
+    <script src="content-manager.js?v=3"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

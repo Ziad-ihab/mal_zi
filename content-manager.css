@@ -1,0 +1,369 @@
+/* =================================================
+   Malak's World — Content Manager UI
+================================================= */
+
+.malak-add-btn {
+    position: fixed;
+    bottom: 26px;
+    right: 26px;
+    z-index: 500;
+
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+
+    border: 1px solid rgba(70, 220, 255, 0.9);
+
+    background: linear-gradient(
+        135deg,
+        rgba(0, 150, 255, 0.65),
+        rgba(0, 80, 180, 0.6)
+    );
+
+    color: #ffe56b;
+    font-size: 30px;
+    line-height: 1;
+    font-weight: 400;
+    cursor: pointer;
+
+    box-shadow:
+        0 0 15px rgba(40, 200, 255, 0.5),
+        inset 0 0 20px rgba(255, 255, 255, 0.08);
+
+    transition: 0.3s;
+}
+
+.malak-add-btn:hover {
+    transform: translateY(-4px) scale(1.06);
+    box-shadow:
+        0 0 25px rgba(40, 200, 255, 0.75),
+        inset 0 0 20px rgba(255, 255, 255, 0.12);
+}
+
+.malak-add-btn-disabled {
+    opacity: 0.5;
+}
+
+@media (max-width: 640px) {
+    .malak-add-btn {
+        bottom: 18px;
+        right: 18px;
+        width: 50px;
+        height: 50px;
+        font-size: 26px;
+    }
+}
+
+
+/* ---------- Modal ---------- */
+
+.malak-modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 600;
+
+    background: rgba(1, 8, 23, 0.82);
+    backdrop-filter: blur(6px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.malak-modal-overlay.open {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.malak-modal {
+    width: min(420px, 90vw);
+    max-height: 85vh;
+    overflow-y: auto;
+
+    padding: 30px 26px;
+    border-radius: 18px;
+
+    border: 1px solid rgba(70, 220, 255, 0.35);
+
+    background: linear-gradient(
+        160deg,
+        rgba(6, 20, 45, 0.96),
+        rgba(1, 8, 23, 0.98)
+    );
+
+    box-shadow: 0 0 40px rgba(0, 120, 255, 0.25);
+    position: relative;
+}
+
+.malak-modal h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 24px;
+    color: #ffe56b;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.malak-modal-close {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.malak-type-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.malak-type-btn {
+    flex: 1;
+    padding: 8px 6px;
+    border-radius: 10px;
+    border: 1px solid rgba(70, 220, 255, 0.4);
+    background: rgba(0, 100, 200, 0.15);
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12.5px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.malak-type-btn.active {
+    background: linear-gradient(
+        135deg,
+        rgba(0, 150, 255, 0.75),
+        rgba(0, 80, 180, 0.7)
+    );
+    border-color: rgba(70, 220, 255, 1);
+    box-shadow: 0 0 12px rgba(40, 200, 255, 0.5);
+}
+
+.malak-field {
+    margin-bottom: 14px;
+}
+
+.malak-field label {
+    display: block;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 6px;
+}
+
+.malak-field input,
+.malak-field textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(70, 220, 255, 0.3);
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    resize: vertical;
+}
+
+.malak-field input::placeholder,
+.malak-field textarea::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.malak-submit-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border-radius: 12px;
+    border: 1px solid rgba(70, 220, 255, 0.9);
+
+    background: linear-gradient(
+        135deg,
+        rgba(0, 150, 255, 0.65),
+        rgba(0, 80, 180, 0.6)
+    );
+
+    color: #ffe56b;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.malak-submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 18px rgba(40, 200, 255, 0.6);
+}
+
+.malak-submit-btn:disabled {
+    opacity: 0.6;
+    cursor: default;
+    transform: none;
+}
+
+.malak-status {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.75);
+    min-height: 18px;
+    white-space: pre-wrap;
+    line-height: 1.5;
+}
+
+
+/* ---------- Dynamically added content ---------- */
+
+.malak-text-memory {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    text-align: center;
+    background: rgba(0, 100, 200, 0.12);
+    border: 1px solid rgba(70, 220, 255, 0.3);
+    border-radius: 12px;
+    color: rgba(255, 255, 255, 0.85);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 16px;
+}
+
+.malak-memory-caption {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    right: 8px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.85);
+    background: rgba(1, 8, 23, 0.55);
+    padding: 4px 8px;
+    border-radius: 8px;
+}
+
+.malak-more-surprises {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 30px;
+    width: min(500px, 92vw);
+}
+
+.malak-mini-surprise {
+    padding: 16px 20px;
+    border-radius: 14px;
+    border: 1px solid rgba(70, 220, 255, 0.35);
+    background: rgba(0, 100, 200, 0.12);
+    text-align: center;
+}
+
+.malak-mini-surprise span {
+    color: #ffe56b;
+    font-size: 18px;
+}
+
+.malak-mini-surprise p {
+    margin-top: 6px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+
+/* ---------- Visible error banner ---------- */
+
+.malak-error-banner {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    left: 20px;
+    max-width: 420px;
+    margin: 0 auto;
+    z-index: 700;
+
+    padding: 14px 18px;
+    border-radius: 12px;
+
+    border: 1px solid rgba(255, 90, 90, 0.6);
+    background: rgba(60, 10, 10, 0.92);
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.25);
+}
+
+.malak-error-banner strong {
+    color: #ff9a9a;
+    font-size: 14px;
+}
+
+.malak-error-banner span {
+    word-break: break-word;
+    direction: ltr;
+    text-align: left;
+}
+
+.malak-error-banner button {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+/* ---------- Generic per-page additions ---------- */
+
+.malak-generic-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.malak-generic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 18px;
+    max-width: 900px;
+    margin: 30px auto 0;
+}
+
+.malak-generic-card {
+    border-radius: 14px;
+    border: 1px solid rgba(70, 220, 255, 0.3);
+    background: rgba(0, 100, 200, 0.12);
+    overflow: hidden;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+.malak-generic-card img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    max-height: 220px;
+}
+
+.malak-generic-card p {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.88);
+    line-height: 1.6;
+}

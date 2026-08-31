@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Ocean — Malak's World</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="content-manager.css?v=3">
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         BACKGROUND
+    ========================================== -->
+
+    <div class="ocean-background">
+
+        <div class="dark-overlay"></div>
+
+        <div class="blue-glow"></div>
+
+        <div class="stars"></div>
+
+        <!-- Moon -->
+        <div class="moon"></div>
+
+        <!-- Moon glow -->
+        <div class="moon-glow"></div>
+
+
+        <!-- Bubbles -->
+
+        <div class="bubble bubble-1"></div>
+        <div class="bubble bubble-2"></div>
+        <div class="bubble bubble-3"></div>
+        <div class="bubble bubble-4"></div>
+        <div class="bubble bubble-5"></div>
+        <div class="bubble bubble-6"></div>
+        <div class="bubble bubble-7"></div>
+        <div class="bubble bubble-8"></div>
+        <div class="bubble bubble-9"></div>
+        <div class="bubble bubble-10"></div>
+        <div class="bubble bubble-11"></div>
+        <div class="bubble bubble-12"></div>
+
+    </div>
+
+
+
+    <!-- =========================================
+         NAVBAR
+    ========================================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <span>☆</span>
+
+            Malak
+
+            <span class="logo-sparkle">✦</span>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index.html" class="active">Home</a>
+
+            <a href="loves.html">Things She Loves</a>
+
+            <a href="memory.html">Memories</a>
+
+            <a href="music.html">Music</a>
+
+            <a href="about.html">About Her</a>
+
+            <a href="surprises.html">Surprises</a>
+
+            <a href="foryou.html">For You</a>
+
+        </nav>
+
+
+        <button class="music-button" id="musicButton">
+
+            ♫
+
+        </button>
+
+
+        <button class="menu-button" id="menuButton" aria-label="Menu">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </header>
+
+
+    <!-- =========================================
+         MOBILE NAV
+    ========================================== -->
+
+    <nav class="mobile-nav" id="mobileNav">
+
+        <a href="index.html" class="active">Home</a>
+        <a href="loves.html">Things She Loves</a>
+        <a href="memory.html">Memories</a>
+        <a href="music.html">Music</a>
+        <a href="about.html">About Her</a>
+        <a href="surprises.html">Surprises</a>
+        <a href="foryou.html">For You</a>
+
+    </nav>
+
+
+
+    <!-- =========================================
+         LEFT FLOATING MENU
+    ========================================== -->
+
+    <div class="floating-menu">
+
+        <a href="foryou.html" class="float-btn" title="For You">
+            ♡
+        </a>
+
+        <a href="loves.html" class="float-btn" title="Things She Loves">
+            ≋
+        </a>
+
+        <a href="surprises.html" class="float-btn" title="Surprises">
+            ☆
+        </a>
+
+        <a href="about.html" class="float-btn" title="About Her">
+            ♡
+        </a>
+
+    </div>
+
+
+
+    <main>
+
+        <section class="content-section ocean-page" id="ocean">
+
+            <div class="section-title reveal">
+                <div class="title-line"></div>
+                <span>✦</span>
+                <h2>The Ocean</h2>
+                <span>✦</span>
+                <div class="title-line"></div>
+            </div>
+
+            <p class="section-intro ocean-intro">
+                A little corner for the sea — its waves, colors, sunsets, photos, and the moments that feel like home.
+            </p>
+
+            <!-- Ocean switch -->
+            <div class="ocean-switch-wrap reveal">
+                <div class="ocean-switch">
+                    <button class="ocean-switch-btn active" data-ocean-target="oceanPhotos">
+                        <span class="switch-icon">▣</span>
+                        <span>Photos</span>
+                    </button>
+                    <button class="ocean-switch-btn" data-ocean-target="oceanVideos">
+                        <span class="switch-icon">▶</span>
+                        <span>Videos</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- =============================
+                 PHOTOS — STACK STYLE
+            ============================== -->
+            <section class="ocean-media-panel active reveal" id="oceanPhotos">
+
+                <div class="ocean-feed-head">
+                    <span class="ocean-feed-badge">🌊</span>
+                    <div>
+                        <h3>Ocean Memories</h3>
+                        <p>A little stack of moments that belong to the sea.</p>
+                    </div>
+                </div>
+
+                <div class="ocean-photo-viewer">
+                    <button class="ocean-media-arrow ocean-prev" id="oceanPhotoPrev" aria-label="Previous photo">‹</button>
+
+                    <div class="ocean-photo-stack" aria-label="Ocean photo viewer">
+                        <button class="ocean-stack-card ocean-photo-slide" data-index="0" data-image="sea.jpg" aria-label="Open moonlit ocean photo">
+                            <img src="sea.jpg" alt="Moonlit ocean">
+                        </button>
+
+                        <button class="ocean-stack-card ocean-photo-slide" data-index="1" data-image="photos/ocean-sunset.jpg" aria-label="Open sunset photo">
+                            <img src="photos/ocean-sunset.jpg" alt="Ocean sunset">
+                        </button>
+
+                        <button class="ocean-stack-card ocean-photo-slide" data-index="2" data-image="photos/ocean-heart.jpg" aria-label="Open heart photo">
+                            <img src="photos/ocean-heart.jpg" alt="A heart drawn in the sand by the sea">
+                        </button>
+
+                        <div class="stack-caption" id="oceanPhotoCaption">
+                            <strong>A little heart by the sea</strong>
+                            <small>Tap the arrows to move between memories ♡</small>
+                        </div>
+                    </div>
+
+                    <button class="ocean-media-arrow ocean-next" id="oceanPhotoNext" aria-label="Next photo">›</button>
+                </div>
+
+                <div class="ocean-stack-dots" id="oceanPhotoDots" aria-label="Choose a photo">
+                    <button class="active" data-index="0" aria-label="Photo 1"></button>
+                    <button data-index="1" aria-label="Photo 2"></button>
+                    <button data-index="2" aria-label="Photo 3"></button>
+                </div>
+
+                <div class="ocean-photo-counter" id="oceanPhotoCounter">1 / 3</div>
+
+                <button class="ocean-flip-button" data-ocean-target="oceanVideos">
+                    <span class="flip-symbol">↻</span>
+                    <span>Watch ocean videos</span>
+                    <span class="flip-play">▶</span>
+                </button>
+
+            </section>
+
+            <!-- =============================
+                 VIDEOS — STACK STYLE
+            ============================== -->
+            <section class="ocean-media-panel reveal" id="oceanVideos">
+
+                <div class="ocean-feed-head">
+                    <span class="ocean-feed-badge">▶</span>
+                    <div>
+                        <h3>Ocean Videos</h3>
+                        <p>Waves moving, water shining, and little moments on repeat.</p>
+                    </div>
+                </div>
+
+                <div class="ocean-video-viewer">
+                    <button class="ocean-media-arrow ocean-prev" id="oceanVideoPrev" aria-label="Previous video">‹</button>
+
+                    <div class="ocean-video-stack">
+                        <div class="ocean-video-card ocean-video-slide active" data-index="0">
+                            <video class="ocean-video" controls preload="metadata" poster="sea.jpg">
+                                <source src="videos/ocean.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="video-info">
+                                <span class="video-status">●</span>
+                                <div>
+                                    <h4>Ocean moments</h4>
+                                    <p>Your first ocean video.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ocean-video-card ocean-video-slide" data-index="1">
+                            <video class="ocean-video" controls preload="metadata" poster="sea.jpg">
+                                <source src="videos/ocean-2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="video-info">
+                                <span class="video-status">●</span>
+                                <div>
+                                    <h4>Another little moment</h4>
+                                    <p>Add your second video as <code>videos/ocean-2.mp4</code>.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="ocean-media-arrow ocean-next" id="oceanVideoNext" aria-label="Next video">›</button>
+                </div>
+
+                <div class="ocean-stack-dots video-dots" id="oceanVideoDots" aria-label="Choose a video">
+                    <button class="active" data-index="0" aria-label="Video 1"></button>
+                    <button data-index="1" aria-label="Video 2"></button>
+                </div>
+
+                <div class="ocean-photo-counter" id="oceanVideoCounter">1 / 2</div>
+
+                <button class="ocean-flip-button" data-ocean-target="oceanPhotos">
+                    <span class="flip-symbol">↻</span>
+                    <span>Back to ocean photos</span>
+                    <span class="flip-play">▣</span>
+                </button>
+
+            </section>
+
+        <!-- Fullscreen photo viewer -->
+        <div class="ocean-lightbox" id="oceanLightbox" aria-hidden="true">
+            <button class="ocean-lightbox-close" id="oceanLightboxClose" aria-label="Close photo">×</button>
+            <img id="oceanLightboxImage" src="sea.jpg" alt="Ocean photo enlarged">
+        </div>
+
+    </main>
+    <!-- Firebase (Content Manager) -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script src="firebase-config.js"></script>
+    <script>window.PAGE_TYPE = "ocean";</script>
+    <script src="content-manager.js?v=3"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
